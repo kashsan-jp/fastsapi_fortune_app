@@ -7,11 +7,11 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "http://localhost:5501",
+    "http://localhost:5501/",
 ]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # 許可するオリジン（"*"で全て許可も可能）
+    allow_origins=["*"],  # 許可するオリジン（"*"で全て許可も可能）
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
