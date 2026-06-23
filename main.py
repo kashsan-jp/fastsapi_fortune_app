@@ -45,16 +45,16 @@ def get_items():
     return load_json()
 
 # POST: 新規データを追加してJSONファイルに保存
-@app.post("/items", response_model=Item)
-def create_item(item: Item):
-    data = load_json()
+# @app.post("/items", response_model=Item)
+# def create_item(item: Item):
+#     data = load_json()
     
-    # IDの重複チェック
-    if any(i["id"] == item.id for i in data):
-        raise HTTPException(status_code=400, detail="Item ID already exists")
+#     # IDの重複チェック
+#     if any(i["id"] == item.id for i in data):
+#         raise HTTPException(status_code=400, detail="Item ID already exists")
     
-    # データを追加して保存
-    data.append(item.model_dump())
-    save_json(data)
+#     # データを追加して保存
+#     data.append(item.model_dump())
+#     save_json(data)
     
-    return item
+#     return item
