@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "https://fastsapi-fortune-app.vercel.app/items/",
+    "http://localhost:5501",
 ]
 app.add_middleware(
     CORSMiddleware,
